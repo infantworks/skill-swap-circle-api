@@ -27,6 +27,10 @@ public class ProfileController {
 	@Autowired
 	ProfileService service;
 	
+	public String appRunStatus() {
+		return "SKILL SWAP CIRCLE Application is running";
+	}
+	
 	@RequestMapping(method = RequestMethod.POST, value = "/add-profile")
 	public ResponseEntity<?> createProfile(@RequestBody Profile profile) {
 		try {
